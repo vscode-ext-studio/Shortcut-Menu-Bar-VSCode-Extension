@@ -1,11 +1,11 @@
 {
-  "name": "shortcut-menu-bar",
-  "displayName": "Shortcut Menu Bar",
+  "name": "shortcut-menu-bar-plus",
+  "displayName": "Shortcut Menu Bar Plus",
   "description": "Add handy buttons like beautify, show opened files, save, toggle terminal, activity bar etc to editor menu bar. User-defined buttons are also possible.",
   "version": "3.0.4",
-  "publisher": "jerrygoyal",
+  "publisher": "cweijan",
   "author": {
-    "name": "Gourav Goyal"
+    "name": "Weijan Chen"
   },
   "engines": {
     "vscode": "^1.65.0"
@@ -17,14 +17,14 @@
     "theme": "dark"
   },
   "bugs": {
-    "url": "https://github.com/GorvGoyl/Shortcut-Menu-Bar-VSCode-Extension/issues",
+    "url": "https://github.com/vscode-ext-studio/Shortcut-Menu-Bar-VSCode-Extension/issues",
     "email": "hey@gourav.io"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GorvGoyl/Shortcut-Menu-Bar-VSCode-Extension.git"
+    "url": "https://github.com/vscode-ext-studio/Shortcut-Menu-Bar-VSCode-Extension.git"
   },
-  "homepage": "https://github.com/GorvGoyl/Shortcut-Menu-Bar-VSCode-Extension",
+  "homepage": "https://github.com/vscode-ext-studio/Shortcut-Menu-Bar-VSCode-Extension",
   "categories": [
     "Programming Languages",
     "Other",
@@ -979,7 +979,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
-    "login": "vsce login jerrygoyal",
+    "login": "vsce login",
     "publish": "vsce publish",
     "package": "vsce package"
   },
