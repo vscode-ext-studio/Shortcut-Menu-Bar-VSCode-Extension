@@ -101,13 +101,13 @@
           "ShortcutMenuBar.navigateBack": {
             "title": "Navigate back",
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "show icon for 'Navigate back'"
           },
           "ShortcutMenuBar.navigateForward": {
             "title": "Navigate forward",
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "show icon for 'Navigate forward'"
           },
           "ShortcutMenuBar.switchHeaderSource": {
@@ -149,7 +149,7 @@
           "ShortcutMenuBar.quickOpen": {
             "title": "Quick open",
             "type": "boolean",
-            "default": false,
+            "default": true,
             "description": "show icon for Go to File, 'Quick Open'"
           },
           "ShortcutMenuBar.findReplace": {
