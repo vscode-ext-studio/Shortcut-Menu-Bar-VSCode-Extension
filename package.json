@@ -119,7 +119,7 @@
           "ShortcutMenuBar.beautify": {
             "title": "Beautify selection/file",
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "show icon for 'Beautify/Format selection or file'"
           },
           "ShortcutMenuBar.toggleRenderWhitespace": {
@@ -131,7 +131,7 @@
           "ShortcutMenuBar.openFilesList": {
             "title": "show opened files list",
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "show icon for 'Opened files list'"
           },
           "ShortcutMenuBar.toggleTerminal": {
@@ -191,7 +191,7 @@
           "ShortcutMenuBar.openFile": {
             "title": "Open file",
             "type": "boolean",
-            "default": false,
+            "default": true,
             "description": "show icon for 'Open File'"
           },
           "ShortcutMenuBar.newFile": {
@@ -346,19 +346,13 @@
         "command": "ShortcutMenuBar.navigateBack",
         "title": "Navigate back",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/triangle-left_light.svg",
-          "dark": "images/triangle-left.svg"
-        }
+        "icon": "$(arrow-left)"
       },
       {
         "command": "ShortcutMenuBar.navigateForward",
         "title": "Navigate forward",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/triangle-right_light.svg",
-          "dark": "images/triangle-right.svg"
-        }
+        "icon": "$(arrow-right)"
       },
       {
         "command": "ShortcutMenuBar.switchHeaderSource",
@@ -382,10 +376,7 @@
         "command": "ShortcutMenuBar.beautify",
         "title": "Beautify",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/format_light.svg",
-          "dark": "images/format.svg"
-        }
+        "icon": "$(json)"
       },
       {
         "command": "ShortcutMenuBar.toggleRenderWhitespace",
@@ -409,10 +400,7 @@
         "command": "ShortcutMenuBar.toggleTerminal",
         "title": "Toggle terminal",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/terminal_light.svg",
-          "dark": "images/terminal.svg"
-        }
+        "icon": "$(terminal)"
       },
       {
         "command": "ShortcutMenuBar.toggleActivityBar",
@@ -427,10 +415,7 @@
         "command": "ShortcutMenuBar.quickOpen",
         "title": "Quick open",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/files-search_light.svg",
-          "dark": "images/files-search.svg"
-        }
+        "icon": "$(files)"
       },
       {
         "command": "ShortcutMenuBar.findReplace",
@@ -490,10 +475,7 @@
         "command": "ShortcutMenuBar.openFile",
         "title": "Open file",
         "category": "ShortcutMenuBar",
-        "icon": {
-          "light": "images/openFile_light.svg",
-          "dark": "images/openFile.svg"
-        }
+        "icon": "$(folder)"
       },
       {
         "command": "ShortcutMenuBar.newFile",
@@ -782,6 +764,11 @@
           "group": "navigation@3"
         },
         {
+          "when": "config.ShortcutMenuBar.openFile",
+          "command": "ShortcutMenuBar.openFile",
+          "group": "navigation@4"
+        },
+        {
           "when": "!isInDiffEditor && !markdownPreviewFocus && config.ShortcutMenuBar.save",
           "command": "ShortcutMenuBar.save",
           "group": "navigation@4"
@@ -845,11 +832,6 @@
           "when": "!isInDiffEditor && !markdownPreviewFocus && config.ShortcutMenuBar.formatWith",
           "command": "ShortcutMenuBar.formatWith",
           "group": "navigation@16"
-        },
-        {
-          "when": "config.ShortcutMenuBar.openFile",
-          "command": "ShortcutMenuBar.openFile",
-          "group": "navigation@17"
         },
         {
           "when": "config.ShortcutMenuBar.newFile",

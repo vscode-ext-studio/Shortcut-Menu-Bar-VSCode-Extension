@@ -83,7 +83,7 @@ export function activate(context: ExtensionContext) {
     ["ShortcutMenuBar.redo", "redo"],
     ["ShortcutMenuBar.commentLine", "editor.action.commentLine"],
     ["ShortcutMenuBar.saveAll", "workbench.action.files.saveAll"],
-    ["ShortcutMenuBar.openFile", "workbench.action.files.openFile"],
+    ["ShortcutMenuBar.openFile", "workbench.action.files.openFolder"],
     ["ShortcutMenuBar.newFile", "workbench.action.files.newUntitledFile"],
     ["ShortcutMenuBar.goToDefinition", "editor.action.revealDefinition"],
     ["ShortcutMenuBar.cut", "editor.action.clipboardCutAction"],
@@ -115,7 +115,7 @@ export function activate(context: ExtensionContext) {
   commandArray.forEach((command) => {
     disposableCommandsArray.push(
       commands.registerCommand(command[0], () => {
-        commands.executeCommand(command[1]).then(function () {});
+        commands.executeCommand(command[1]).then(function () { });
       })
     );
   });
@@ -133,11 +133,11 @@ export function activate(context: ExtensionContext) {
       if (window.state.focused === true && !editor.selection.isEmpty) {
         commands
           .executeCommand("editor.action.formatSelection")
-          .then(function () {});
+          .then(function () { });
       } else {
         commands
           .executeCommand("editor.action.formatDocument")
-          .then(function () {});
+          .then(function () { });
       }
     }
   );
@@ -153,11 +153,11 @@ export function activate(context: ExtensionContext) {
       if (window.state.focused === true && !editor.selection.isEmpty) {
         commands
           .executeCommand("editor.action.formatSelection.multiple")
-          .then(function () {});
+          .then(function () { });
       } else {
         commands
           .executeCommand("editor.action.formatDocument.multiple")
-          .then(function () {});
+          .then(function () { });
       }
     }
   );
@@ -172,7 +172,7 @@ export function activate(context: ExtensionContext) {
       }
       commands
         .executeCommand("workbench.action.showAllEditorsByMostRecentlyUsed")
-        .then(function () {});
+        .then(function () { });
     }
   );
 
@@ -182,7 +182,7 @@ export function activate(context: ExtensionContext) {
       if (hasCpp) {
         commands
           .executeCommand("C_Cpp.SwitchHeaderSource")
-          .then(function () {});
+          .then(function () { });
       } else {
         window.showErrorMessage(
           "C/C++ extension (ms-vscode.cpptools) is not installed!"
@@ -236,7 +236,7 @@ export function activate(context: ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
 
 // local functions for user-defined button execution follow, based on
 // https://github.com/ppatotski/vscode-commandbar/ Copyright 2018 Petr Patotski
